@@ -116,15 +116,16 @@ If a process needs access to system resources, it needs Windows to provide "Hand
 
 You should export the output in a `.txt` file like previous questions for smooth analysis.
 
-![question_7](/assets/img/BlueTeamLabs/Forensics/Memory-Analysis_Ransomware/Question_7.png)
+![question_7](/assets/img/BlueTeamLabs/Forensics/Memory-Analysis_Ransomware/question_7.png)
 
 Now use `grep ".eky" <.txt>` to have the answer:
 
-![question_7_2](/assets/img/BlueTeamLabs/Forensics/Memory-Analysis_Ransomware/Question_7_2.png)
+![question_7_2](/assets/img/BlueTeamLabs/Forensics/Memory-Analysis_Ransomware/question_7_2.png)
 
 The answer is `00000000.eky`.
 
 
 
-**Ps:**This is one of the longest write-up I've ever written. If you have been with me to this end, thank you so much!.
+**P/s:** This is one of the longest write-up I've ever written. If you have been with me to this end, thank you so much!.
+
 
