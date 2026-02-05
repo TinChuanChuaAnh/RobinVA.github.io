@@ -5,12 +5,15 @@ categories: [CTF, picoCTF, Forensics]         # Danh mục lớn, danh mục con
 tags: [pdf, sharutils]     # Tag để tìm kiếm (viết thường)
 author: "RobinVA"
 ---
+
 # Write-up | picoCTF | File Types
 The link to the challenge is [here](https://play.picoctf.org/practice/challenge/268?category=4&page=4)
 ## Description
 >*This file was found among some files marked confidential but my pdf reader cannot read it, maybe yours can.*
 >*You can download the file from [here](https://artifacts.picoctf.net/c/81/Flag.pdf).*
+
 ---
+
 ### Intial Analysis
 Initially, this looks like a `.pdf` file, but when I open it, the reader cannot read anything:
 ![pdf](/assets/img/picoCTF/Forensics/File_Types/pdf_checking.png)
