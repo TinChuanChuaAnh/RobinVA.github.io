@@ -5,11 +5,14 @@ categories: [CTF, Forensics]         # Danh mục lớn, danh mục con
 tags: [vol3, ransomware, memory]     # Tag để tìm kiếm (viết thường)
 author: "RobinVA"
 ---
+
 # Write-up | BlueTeamLabs | Memory Analysis - Ransomware
 The link to the challenge is [here](https://blueteamlabs.online/home/challenge/memory-analysis-ransomware-7da6c9244d)
 ## Description
 >*The Account Executive called the SOC earlier and sounds very frustrated and angry. He stated he can’t access any files on his computer and keeps receiving a pop-up stating that his files have been encrypted. You disconnected the computer from the network and extracted the memory dump of his machine and started analyzing it with Volatility. Continue your investigation to uncover how the ransomware works and how to stop it!*
+
 ---
+
 ### Initial look
 We are provided a `infected.vmem` file. This tells that we will need `volatility`. In this chall, I'm gonna specifically use `volatility3` to solve the challenge, so in order to follow, I recommend having it installed in your computer.
 This chall has 7 questions. Now let's begin.
@@ -128,6 +131,7 @@ The answer is `00000000.eky`.
 
 
 **P/s:** This is one of the longest write-up I've ever written. If you have been with me to this end, thank you so much!.
+
 
 
 
