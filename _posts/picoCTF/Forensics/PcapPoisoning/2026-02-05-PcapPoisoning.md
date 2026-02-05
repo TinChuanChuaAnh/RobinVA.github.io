@@ -1,7 +1,7 @@
 ---
 title: PcapPoisoning - picoCTF 2019  # Tên bài viết sẽ hiện to đùng
 date: 2026-02-05 13:15:00 +0700      # Thời gian đăng (Quan trọng: +0700 là giờ VN)
-categories: [CTF, Forensics]         # Danh mục lớn, danh mục con
+categories: [CTF, picoCTF, Forensics]         # Danh mục lớn, danh mục con
 tags: [wireshark, pcap, strings]     # Tag để tìm kiếm (viết thường)
 author: "RobinVA"
 ---
@@ -34,6 +34,7 @@ The flag is:
 
 
 </details>
+
 
 
 
