@@ -3,6 +3,7 @@ title: File Types - picoCTF 2022  # Tên bài viết sẽ hiện to đùng
 date: 2026-02-05 14:40:00 +0700      # Thời gian đăng (Quan trọng: +0700 là giờ VN)
 categories: [CTF, Forensics]         # Danh mục lớn, danh mục con
 tags: [pdf, sharutils]     # Tag để tìm kiếm (viết thường)
+author: "RobinVA"
 ---
 # Write-up | picoCTF | File Types
 The link to the challenge is [here](https://play.picoctf.org/practice/challenge/268?category=4&page=4)
