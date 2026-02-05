@@ -126,4 +126,5 @@ The answer is `00000000.eky`.
 
 
 
-**P/s:**This is one of the longest write-up I've ever written. If you have been with me to this end, thank you so much!.
+**Ps:**This is one of the longest write-up I've ever written. If you have been with me to this end, thank you so much!.
+
