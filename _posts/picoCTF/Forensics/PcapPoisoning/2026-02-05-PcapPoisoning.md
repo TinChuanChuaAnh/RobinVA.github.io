@@ -15,13 +15,13 @@ I got a file named `trace.pcap`. After `file`-ed the file, we can confirm it's a
 
 ### Walkthrough
 1. First, opening the file in Wireshark, we have an initial look at the traffic:
-![Traffic](/assets/img/traffic.png)
+![Traffic](/assets/img/picoCTF/Forensics/PcapPoisoning/traffic.png)
 
 Notice that there's FTP packet that contains the username and password:
-![Sus packet](/assets/img/sus_packet.png)
+![Sus packet](/assets/img/picoCTF/Forensics/PcapPoisoning/sus_packet.png)
 
 Follow the packet via `Follow`->`TCP stream`, the filter is changed to `tcp.stream eq 1`, and we can see there's a TCP packet that appears:
-![TCP](/assets/img/TCP.png)
+![TCP](/assets/img/picoCTF/Forensics/PcapPoisoning/TCP.png)
 
 We can clearly see the flag is right there. Copy it as ASCII text and we got the flag.
 
@@ -33,4 +33,5 @@ The flag is:
 
 
 </details>
+
 
