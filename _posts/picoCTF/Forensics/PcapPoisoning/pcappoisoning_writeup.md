@@ -19,9 +19,10 @@ Follow the packet via `Follow`->`TCP stream`, the filter is changed to `tcp.stre
 
 We can clearly see the flag is right there. Copy it as ASCII text and we got the flag.
 
-The flag is <details>
+The flag is <Click here>
   <summary>Click here</summary>
   
   **picoCTF{P64P_4N4L7S1S_SU55355FUL_4624a8b6}**
 
-</details>
+
+</Click here>
