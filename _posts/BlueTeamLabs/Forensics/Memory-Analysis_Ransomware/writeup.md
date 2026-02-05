@@ -28,7 +28,7 @@ Before getting started, look at the command that the author provides us first. T
 
 Here is the result:
 
-![psscan](assets/img/psscan.png)
+![psscan](/assets/img/BlueTeamLabs/Forensics/Memory-Analysis_Ransomware/psscan.png)
 
 Take a quick look and we can see that there's a suspicious task name `@WanaDecryptor`. This is the answer of the first question.
 
@@ -39,7 +39,7 @@ Take a quick look and we can see that there's a suspicious task name `@WanaDecry
 
 As we can see, the answer's format is PPID, so we will have to take a look at the PPID column.
 
-![question_2](assets/img/question_2.png)
+![question_2](/assets/img/BlueTeamLabs/Forensics/Memory-Analysis_Ransomware/question_2.png)
 
 The answer is `2732`
 
@@ -54,7 +54,7 @@ To solve this question, we need `grep` command:
 ```grep "2732" psscan_output.txt```
 As I said in question 1, you can replace "psscan_output" by the name you named the output file.
 
-![question_3](assets/img/question_3.png)
+![question_3](/assets/img/BlueTeamLabs/Forensics/Memory-Analysis_Ransomware/question_3.png)
 
 The answer is `or4qtckT.exe `
 
@@ -64,11 +64,11 @@ The answer is `or4qtckT.exe `
 
 In the image I provided in the last question, there's still one more process that we need to pay attention:
 
-![question_4](assets/img/question_4.png)
+![question_4](/assets/img/BlueTeamLabs/Forensics/Memory-Analysis_Ransomware/question_4.png)
 
 I took a quick search on Google and found this:
 
-![question_4_2](assets/img/question_4_2.png)
+![question_4_2](/assets/img/BlueTeamLabs/Forensics/Memory-Analysis_Ransomware/question_4_2.png)
 
 Now we got the context: this is a WannaCry resemblance, and `taskdl.exe` is a part of this attack.
 I asked Gemini about this, and these are what I learned:
@@ -90,7 +90,7 @@ The command to run is:
 
 ```sudo python3 /opt/volatility3/vol.py -f infected.vmem windows.cmdline > <output_file>.txt | grep "or4qtckT.exe"```
 
-![question_6](assets/img/question_6.png)
+![question_6](/assets/img/BlueTeamLabs/Forensics/Memory-Analysis_Ransomware/question_6.png)
 
 The answer is `C:\Users\hacker\Desktop\or4qtckT.exe`
 
@@ -116,13 +116,14 @@ If a process needs access to system resources, it needs Windows to provide "Hand
 
 You should export the output in a `.txt` file like previous questions for smooth analysis.
 
-![question_7](assets/img/Question_7.png)
+![question_7](/assets/img/BlueTeamLabs/Forensics/Memory-Analysis_Ransomware/Question_7.png)
 
 Now use `grep ".eky" <.txt>` to have the answer:
 
-![question_7_2](assets/img/Question_7_2.png)
+![question_7_2](/assets/img/BlueTeamLabs/Forensics/Memory-Analysis_Ransomware/Question_7_2.png)
 
 The answer is `00000000.eky`.
+
 
 
 **P/s:**This is one of the longest write-up I've ever written. If you have been with me to this end, thank you so much!.
