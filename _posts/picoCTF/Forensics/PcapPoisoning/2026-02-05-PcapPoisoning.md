@@ -5,12 +5,15 @@ categories: [CTF, picoCTF, Forensics]         # Danh mục lớn, danh mục con
 tags: [wireshark, pcap, strings]     # Tag để tìm kiếm (viết thường)
 author: "RobinVA"
 ---
+
 # Write-up | picoCTF | PcapPoisoning
 The link to the challenge is [here](https://play.picoctf.org/practice/challenge/362?category=4&page=2)
 ## Description
 >*How about some hide and seek heh?*
 >*Download this [file](https://artifacts.picoctf.net/c/374/trace.pcap) and find the flag.*
+
 ---
+
 ### Intial Analysis
 I got a file named `trace.pcap`. After `file`-ed the file, we can confirm it's a real `.pcap` file. Now let's begin.
 
@@ -34,6 +37,7 @@ The flag is:
 
 
 </details>
+
 
 
 
