@@ -23,7 +23,7 @@ Before getting started, look at the command that the author provides us first. T
 ```sudo python3 /opt/volatility3/vol.py -f infected.vmem windows.psscan | sort -k 9 > psscan_output.txt```
 
 - ```windows.psscan``` stands for "process scaning" (or so I thought).
-- ```sort -k 9 ```: `-k` here means "k(olumn)" (just simply remember that, no need to find what it actually means ^^). Basically, it will sort the output based on the 9th column, which is the `CreateTime` column. We want to see the processes in the time order.
+- ```sort -k 9 ```: `-k` here means "k(olumn)" (just simply remember that, no need to find what it actually means ^^). Basically, it will sort the output based on the 9th column, which is the `CreateTime` column. We want to see the processes in the time order. However, to make sure, please run ```sudo python3 /opt/volatility3/vol.py -f infected.vmem windows.psscan``` first to see the `CreateTime` is of which column.
 - ```psscan_output.txt```: Output a `.txt` file for easier analysis. You can change the filename based on your preference.
 
 Here is the result:
@@ -127,5 +127,6 @@ The answer is `00000000.eky`.
 
 
 **P/s:** This is one of the longest write-up I've ever written. If you have been with me to this end, thank you so much!.
+
 
 
