@@ -5,7 +5,7 @@ categories: [CTF, Forensics]         # Danh mục lớn, danh mục con
 tags: [pdf, sharutils]     # Tag để tìm kiếm (viết thường)
 ---
 # Write-up | picoCTF | File Types
-Link to the challenge is [here](https://play.picoctf.org/practice/challenge/268?category=4&page=4)
+The link to the challenge is [here](https://play.picoctf.org/practice/challenge/268?category=4&page=4)
 ## Description
 >*This file was found among some files marked confidential but my pdf reader cannot read it, maybe yours can.*
 >*You can download the file from [here](https://artifacts.picoctf.net/c/81/Flag.pdf).*
