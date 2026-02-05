@@ -3,6 +3,7 @@ title: BlueTeamLabs - Memory Analysis - Ransomware  # Tên bài viết sẽ hi�
 date: 2026-02-05 21:35:00 +0700      # Thời gian đăng (Quan trọng: +0700 là giờ VN)
 categories: [CTF, Forensics]         # Danh mục lớn, danh mục con
 tags: [vol3, ransomware, memory]     # Tag để tìm kiếm (viết thường)
+author: "RobinVA"
 ---
 # Write-up | BlueTeamLabs | Memory Analysis - Ransomware
 The link to the challenge is [here](https://blueteamlabs.online/home/challenge/memory-analysis-ransomware-7da6c9244d)
@@ -127,6 +128,7 @@ The answer is `00000000.eky`.
 
 
 **P/s:** This is one of the longest write-up I've ever written. If you have been with me to this end, thank you so much!.
+
 
 
 
