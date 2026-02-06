@@ -13,12 +13,12 @@ The link to the challenge is [here](https://blueteamlabs.online/home/challenge/m
 
 ---
 
-### Initial look
+#### Initial look
 We are provided a `infected.vmem` file. This tells that we will need `volatility`. In this chall, I'm gonna specifically use `volatility3` to solve the challenge, so in order to follow, I recommend having it installed in your computer.
 This chall has 7 questions. Now let's begin.
 
-### Walkthrough
-1. >*Run “vol.py -f infected.vmem --profile=Win7SP1x86 psscan” that will list all processes. What is the name of the suspicious process?*
+#### Walkthrough
+### 1. >*Run “vol.py -f infected.vmem --profile=Win7SP1x86 psscan” that will list all processes. What is the name of the suspicious process?*
 
    >*Format: @ProcessName*
 
@@ -37,7 +37,7 @@ Here is the result:
 Take a quick look and we can see that there's a suspicious task name `@WanaDecryptor`. This is the answer of the first question.
 
 
-2. > *What is the parent process ID for the suspicious process?*
+### 2. > *What is the parent process ID for the suspicious process?*
 
    > *Format: PPID*
 
@@ -48,7 +48,7 @@ As we can see, the answer's format is PPID, so we will have to take a look at th
 The answer is `2732`
 
 
-3. >*What is the initial malicious executable that created this process?*
+### 3. >*What is the initial malicious executable that created this process?*
 
    >*Format: ProcessName.exe*
 
@@ -63,7 +63,8 @@ As I said in question 1, you can replace "psscan_output" by the name you named t
 The answer is `or4qtckT.exe `
 
 
-4. >*If you drill down on the suspicious PID (vol.py -f infected.vmem --profile=Win7SP1x86 psscan | grep (PIDhere)), find the process used to delete files*
+### 4. >*If you drill down on the suspicious PID (vol.py -f infected.vmem --profile=Win7SP1x86 psscan | grep (PIDhere)), find the process used to delete files*
+   
    >*Format: ProcessName.exe*
 
 In the image I provided in the last question, there's still one more process that we need to pay attention:
@@ -85,7 +86,7 @@ I asked Gemini about this, and these are what I learned:
 The answer is `taskdl.exe`.
 
 
-5. >*"Find the path where the malicious file was first executed "*
+### 5. >*"Find the path where the malicious file was first executed "*
    >*Format: Drive:\path\...ProcessName.exe*
 
 There is a super useful `vol3` plugin for Windows that helps us a lot in this scenario. It is `windows.cmdline`
@@ -99,7 +100,7 @@ The command to run is:
 The answer is `C:\Users\hacker\Desktop\or4qtckT.exe`
 
 
-6. >*""Can you identify what ransomware it is? (Do your research!)*
+### 6. >*""Can you identify what ransomware it is? (Do your research!)*
 
    >*Format: (I forgot, sorry :( ))*
 
@@ -107,7 +108,7 @@ The answer we need is already in question 4: `WannaCry`
 
 
 
-7. >*"What is the filename for the file with the ransomware public key that was used to encrypt the private key? (.eky extension)"*
+### 7. >*"What is the filename for the file with the ransomware public key that was used to encrypt the private key? (.eky extension)"*
    >*Format: FileName.eky*
 
 Now we need to know a new command, which is:
@@ -131,6 +132,7 @@ The answer is `00000000.eky`.
 
 
 **P/s:** This is one of the longest write-up I've ever written. If you have been with me to this end, thank you so much!.
+
 
 
 
