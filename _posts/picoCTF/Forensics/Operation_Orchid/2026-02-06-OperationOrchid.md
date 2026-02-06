@@ -19,7 +19,7 @@ We also get a `.img` file like the previous challenge: Sleuthkit Apprentice. In 
 
 We will begin at the point after we did `grep` to find files that have the keyword "flag":
 
-![fls_4](assets/img/fls_4.png)
+![fls_4](/assets/img/picoCTF/Forensics/Operation_Orchid/fls_4.png)
 
 You can try `icat` the first file, but it won't show anything valuable. Our focus is now on the second file, which has the extension `.enc`.
 
@@ -29,15 +29,15 @@ This leads me to explore the `.ash_history` file in the partition.
 
 If you do not know what the file is used for, it works like a log: records all of commands that you executed on the Terminal.
 
-![ash_history_location](assets/img/ash_history_location.png)
+![ash_history_location](/assets/img/picoCTF/Forensics/Operation_Orchid/ash_history_location.png)
 
-![offset](assets/img/offset.png)
+![offset](/assets/img/picoCTF/Forensics/Operation_Orchid/offset.png)
 
 The `inode-number` of `.ash_history` is `1875`, and the starting offset of the partition is `411648`. Now we do `icat` with it:
 
 ```icat -o 411648 disk.flag.img 1875 > ash_history.txt```
 
-![icat](assets/img/icat.png)
+![icat](/assets/img/picoCTF/Forensics/Operation_Orchid/icat.png)
 
 As you can see, the hacker used `aes256` algorithm to encrypt the flag. Knowing this, we do:
 
@@ -47,6 +47,7 @@ to get the encrypted file out, and:
 ```openssl aes256 -d -salt -in enc -out flag.txt -k unbreakablepassword1234567```
 to get the flag.
 
-![result](assets/img/result.png)
+![result](/assets/img/picoCTF/Forensics/Operation_Orchid/result.png)
 
 The flag is `picoCTF{h4un71ng_p457_5113beab}`
+
