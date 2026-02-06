@@ -35,7 +35,7 @@ This is a `.ar` file. A quick Google search will let know that you can use `ar -
 
 Just follow what I did above: **Check file type** -> **Search tool** -> **Decompress**, and eventually you will get the flag.
 
-The flag is:
+The flag is (click the arrow below):
 <details>
   <summary></summary>
   
