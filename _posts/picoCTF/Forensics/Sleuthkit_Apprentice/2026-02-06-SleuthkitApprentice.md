@@ -27,7 +27,7 @@ We will start with `mmls`. This command will show displays the contents of a vol
 
 The command that we will execute is ```mmls disk.flag.img```
 
-![mmls](assets/img/mmls.png)
+![mmls](/assets/img/picoCTF/Forensics/Sleuthkit_Apprentice/mmls.png)
 
 To get more general details and information about all partitions, we can do `fsstat -o 2048 disk.flag.img`. 
 
@@ -41,13 +41,13 @@ However, when I read some write-ups, it seems like the command does not help muc
 
 We will do ```fls -o 2048 disk.flag.img``` first:
 
-![fls_1](assets/img/fls_1.png)
+![fls_1](/assets/img/picoCTF/Forensics/Sleuthkit_Apprentice/fls_1.png)
 
 There's nothing special here, so we will take a look at another partition.
 
 If you are going to analyse the ```Linux Swap / Solaris x86 (0x82)```, here is the thing: You can't.
 
-![virtual_ram](assets/img/virtual_ram.png)
+![virtual_ram](/assets/img/picoCTF/Forensics/Sleuthkit_Apprentice/virtual_ram.png)
 
 This partition is specifically used as Virtual RAM in case of RAM overload, so there's nothing such as Inode/MFT (do some research if needed) for `fls` to work with it. For that reason, we skip this paritition.
 
@@ -57,13 +57,13 @@ Our attention is now for the last partition:
 
 Do ```fls -o 360448 disk.flag.img```
 
-![fls_3](assets/img/fls_3.png)
+![fls_3](/assets/img/picoCTF/Forensics/Sleuthkit_Apprentice/fls_3.png)
 
 There are so much things here, so I try to `grep` the output.
 
 The command is ```grep "flag" <your_fls3_output_file>.txt```
 
-![grep_fls3](assets/img/grep_fls3.png)
+![grep_fls3](/assets/img/picoCTF/Forensics/Sleuthkit_Apprentice/grep_fls3.png)
 
 Now we got two suspicious `.txt` files. Let's get the content of these two.
 
@@ -79,6 +79,7 @@ and
 
 - ```icat -o 360448 disk.flag.img 2371```
 
-![result](assets/img/result.png)
+![result](/assets/img/picoCTF/Forensics/Sleuthkit_Apprentice/result.png)
 
 The flag is ```picoCTF{by73_5urf3r_adac6cb4}```.
+
