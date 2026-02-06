@@ -1,7 +1,7 @@
 ---
 title: picoCTF - Operation Orchid  # Tên bài viết sẽ hiện to đùng
 date: 2026-02-06 21:22:00 +0700      # Thời gian đăng (Quan trọng: +0700 là giờ VN)
-categories: [CTF, Forensics]         # Danh mục lớn, danh mục con
+categories: [CTF, Forensics, picoCTF]         # Danh mục lớn, danh mục con
 tags: [sleuthkit, disk image, openssl]     # Tag để tìm kiếm (viết thường)
 author: "RobinVA"
 ---
@@ -50,4 +50,5 @@ to get the flag.
 ![result](/assets/img/picoCTF/Forensics/Operation_Orchid/result.png)
 
 The flag is `picoCTF{h4un71ng_p457_5113beab}`
+
 
