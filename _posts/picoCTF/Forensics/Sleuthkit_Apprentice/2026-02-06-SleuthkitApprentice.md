@@ -1,7 +1,7 @@
 ---
 title: picoCTF - Sleuthkit Apprentice  # Tên bài viết sẽ hiện to đùng
 date: 2026-02-06 20:10:00 +0700      # Thời gian đăng (Quan trọng: +0700 là giờ VN)
-categories: [CTF, Forensics]         # Danh mục lớn, danh mục con
+categories: [CTF, Forensics, picoCTF]         # Danh mục lớn, danh mục con
 tags: [sleuthkit, disk image]     # Tag để tìm kiếm (viết thường)
 author: "RobinVA"
 ---
@@ -82,4 +82,5 @@ and
 ![result](/assets/img/picoCTF/Forensics/Sleuthkit_Apprentice/result.png)
 
 The flag is ```picoCTF{by73_5urf3r_adac6cb4}```.
+
 
