@@ -51,7 +51,7 @@ It will extract the last 16 characters of each line and send them to `base64.txt
 
 ![decoding](/assets/img/picoCTF/Forensics/Flag_in_Flame/decoding.png)
 
-Here it is: `logs.txt` was originally a `.png` file, but decoded. Now we just need to use Base64 tool on Linux:
+Here it is: `logs.txt` was originally a `.png` file, but encoded. Now we just need to use Base64 tool on Linux:
 
 `base64 --decode logs.txt > flag.png`
 
