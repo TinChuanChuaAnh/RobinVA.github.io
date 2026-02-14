@@ -74,6 +74,7 @@ The code in the picture is a HEX code. Once again, I make use of CyberChef and c
 > |  `xxd`    | Create `hex dump` from the input file, containing HEX and ASCII.
 > | `grep`        | Filter the necessary parts of plaintexts.
 > | `base64 --decode` | Decode a Base64 encoded file to the type of file that we want.
+> | PowerToys' "Text Extractor" | Extract text displayed in an image.
 
 ## What did we learn?
 
